@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+:root {
+  --nav-bar-height: 20vh;
+  --nav-bar-text-color: black;
+  --page-hover-transition: 0.3s;
+  --skahe-angle: 1.5deg;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background: linear-gradient(
+      220deg,
+      rgba(34, 243, 233, 0.96) 20%,
+      rgba(202, 231, 231, 0.96) 97%
+    ),
+    url("../images/pattern.jpg");
+  color: white;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+/* Navigation bar */
+nav {
+  height: var(--nav-bar-height);
+  width: 90%;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  overflow: hidden;
+  z-index: 1;
+  animation: fadeIn 1s ease-in-out 3s;
+  animation-fill-mode: both;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+
+nav ul li {
+  list-style: none;
+  position: relative;
+}
+nav ul li a {
+  text-align: center;
+  text-decoration: none;
+  color: var(--nav-bar-text-color);
+  font-size: 3.3rem;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+.highlight {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1%;
+  background-color: var(--nav-bar-text-color);
+  transform: scaleX(0);
+  transition: 0.3s;
+}
+.highlight.transition {
+  transform: scaleX(1);
+}
+
+nav ul li:hover {
+  animation: shake 0.2s ease-in-out;
+}
+nav ul li:hover .highlight {
+  transform: scaleX(1);
+}
+/* Bottom boarder */
+
+/* Header */
+#home {
+  height: calc(100vh - var(--nav-bar-height));
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: var(--nav-bar-height);
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16rem;
+  font-weight: bold;
+  text-shadow: 1px 2px 2px black;
+}
+.hello {
+  animation: fadeInUp 1s ease-in-out;
+  animation-fill-mode: both;
+}
+.today {
+  animation: fadeInUp 1s ease-in-out 1s;
+  animation-fill-mode: both;
+}
+.top-5 {
+  animation: fadeInUp 1s ease-in-out 1.5s;
+  animation-fill-mode: both;
+}
+
+/* Top 5 list */
+.page {
+  width: 100%;
+  height: calc(100vh - var(--nav-bar-height));
+  margin-bottom: var(--nav-bar-height);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.page-place h2 {
+  text-align: center;
+  font-size: 10rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.page-link {
+  flex: 1;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.page-img {
+  margin-left: 100px;
+  height: 100%;
+  width: 50%;
+  border-radius: 10%;
+  transition: var(--page-hover-transition);
+}
+
+.page-name {
+  font-size: 11rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-align: center;
+
+  background: rgb(242, 233, 237);
+  background: linear-gradient(
+    0deg,
+    rgb(180, 215, 255) 0%,
+    rgb(255, 255, 255) 20%,
+    rgb(255, 255, 255) 80%,
+    rgb(180, 215, 255) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+  text-transform: uppercase;
+
+  flex: 1;
+  transition: var(--page-hover-transition);
+}
+.page-link:hover .page-name {
+  transform: scale(0.98);
+}
+.page-link:hover .page-img {
+  transform: rotateZ(-1deg);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(140px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(var(--skahe-angle));
+  }
+  75% {
+    transform: rotateZ(calc(var(--skahe-angle) * -1));
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
