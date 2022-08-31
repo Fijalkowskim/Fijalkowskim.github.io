@@ -2,9 +2,7 @@ let currentButton = null;
 let currentSound = null;
 const homeButton = document.querySelector("#btn-home");
 const buttons = document.querySelectorAll(".nav-button");
-const audioHome = new Audio(
-  "https://github.com/Fijalkowskim/Fijalkowskim.github.io/blob/main/Top5/audio/home.mp3"
-);
+const audioHome = new Audio("home.mp3");
 const audioNumero1 = new Audio("../audio/Numero1.mp3");
 const audioNumero2 = new Audio("../audio/Numero2.mp3");
 const audioNumero3 = new Audio("../audio/Numero3.mp3");
