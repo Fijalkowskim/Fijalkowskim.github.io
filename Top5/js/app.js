@@ -1,16 +1,32 @@
 let currentButton = null;
 let currentSound = null;
+const startButton = document.querySelector("#btn-start");
 const homeButton = document.querySelector("#btn-home");
 const buttons = document.querySelectorAll(".nav-button");
+const hidden = document.querySelector(".hidden");
+
 const audioHome = new Audio(
   "https://github.com/Fijalkowskim/Fijalkowskim.github.io/blob/main/Top5/audio/home.mp3?raw=true"
 );
-const audioNumero1 = new Audio("../audio/Numero1.mp3");
-const audioNumero2 = new Audio("../audio/Numero2.mp3");
-const audioNumero3 = new Audio("../audio/Numero3.mp3");
-const audioNumero4 = new Audio("../audio/Numero4.mp3");
-const audioNumero5 = new Audio("../audio/Numero5.mp3");
-const audioHonorableMention = new Audio("../audio/HonorableMention.mp3");
+const audioNumero1 = new Audio(
+  "https://github.com/Fijalkowskim/Fijalkowskim.github.io/blob/main/Top5/audio/Numero1.mp3?raw=true"
+);
+const audioNumero2 = new Audio(
+  "https://github.com/Fijalkowskim/Fijalkowskim.github.io/blob/main/Top5/audio/Numero2.mp3?raw=true"
+);
+const audioNumero3 = new Audio(
+  "https://github.com/Fijalkowskim/Fijalkowskim.github.io/blob/main/Top5/audio/Numero3.mp3?raw=true"
+);
+const audioNumero4 = new Audio(
+  "https://github.com/Fijalkowskim/Fijalkowskim.github.io/blob/main/Top5/audio/Numero4.mp3?raw=true"
+);
+const audioNumero5 = new Audio(
+  "https://github.com/Fijalkowskim/Fijalkowskim.github.io/blob/main/Top5/audio/Numero5.mp3?raw=true"
+);
+const audioHonorableMention = new Audio(
+  "https://github.com/Fijalkowskim/Fijalkowskim.github.io/blob/main/Top5/audio/HonorableMention.mp3?raw=true"
+);
+//
 
 // Functions
 function GetHighlight(button) {
@@ -29,10 +45,14 @@ function UseAudio(sound) {
   currentSound = sound;
 }
 function StartSetup() {
-  console.log(homeButton);
+  startButton.addEventListener("click", () => {
+    UseAudio(audioHome);
+    startButton.classList.add("hidden");
+    hidden.classList.remove("hidden");
+  });
+
   GetHighlight(homeButton).classList.toggle("transition");
   currentButton = homeButton;
-  UseAudio(audioHome);
 }
 // Main
 buttons.forEach((button) => {

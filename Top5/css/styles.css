@@ -33,6 +33,32 @@ body {
   overflow-x: hidden;
   overflow-y: hidden;
 }
+/* Start Page */
+.hidden {
+  display: none;
+}
+#btn-start {
+  height: 100vh;
+  width: 100vw;
+  background: none;
+  border: none;
+  padding: none;
+  margin: none;
+  color: white;
+  font-size: 16rem;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.4s;
+}
+#btn-start p {
+  transition: 0.2s;
+  display: inline-block;
+}
+
+#btn-start p:hover {
+  color: rgb(29, 96, 100);
+}
+
 /* Navigation bar */
 nav {
   height: var(--nav-bar-height);
