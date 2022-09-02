@@ -45,7 +45,7 @@ body {
   padding: none;
   margin: none;
   color: white;
-  font-size: 16rem;
+  font-size: 160px;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   transition: 0.4s;
@@ -281,6 +281,9 @@ nav ul li:hover .highlight {
   }
 }
 @media (max-width: 600px) {
+  #btn-start {
+    font-size: 80px;
+  }
   #home {
     font-size: 60px;
   }
@@ -321,6 +324,29 @@ nav ul li:hover .highlight {
   .page-img {
     width: 70%;
     height: 40%;
+  }
+}
+@media (max-height: 650px) {
+  #home {
+    font-size: 80px;
+  }
+  .page {
+    align-items: center;
+  }
+
+  .page-place h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+@media (max-height: 400px) {
+  #home {
+    font-size: 50px;
+  }
+}
+@media (max-height: 650px) and (max-width: 760px) {
+  #home {
+    font-size: 50px;
   }
 }
 
