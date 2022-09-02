@@ -104,3 +104,8 @@ buttons.forEach((button) => {
 });
 
 StartSetup();
+
+// For testing
+startButton.classList.add("hidden");
+hidden.classList.remove("hidden");
+//
