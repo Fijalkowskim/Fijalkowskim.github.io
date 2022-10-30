@@ -11,21 +11,21 @@ jakub.addEventListener("click", () => {
   if (currentCharacter === jakub) return;
   ChangeCharacter(
     jakub,
-    "url('https://github.com/Fijalkowskim/Fijalkowskim.github.io/blob/e9b078cff79a7dc359113524beeb59fa68603307/PressAndMove/img/Jakub.png')"
+    "url('https://raw.githubusercontent.com/Fijalkowskim/Fijalkowskim.github.io/main/PressAndMove/img/Jakub.png')"
   );
 });
 michal.addEventListener("click", () => {
   if (currentCharacter === michal) return;
   ChangeCharacter(
     michal,
-    "url('https://github.com/Fijalkowskim/Fijalkowskim.github.io/blob/e9b078cff79a7dc359113524beeb59fa68603307/PressAndMove/img/Michal.png')"
+    "url('https://raw.githubusercontent.com/Fijalkowskim/Fijalkowskim.github.io/main/PressAndMove/img/Michal.png')"
   );
 });
 olek.addEventListener("click", () => {
   if (currentCharacter === olek) return;
   ChangeCharacter(
     olek,
-    "url('https://github.com/Fijalkowskim/Fijalkowskim.github.io/blob/e9b078cff79a7dc359113524beeb59fa68603307/PressAndMove/img/Olek.png')"
+    "url('https://raw.githubusercontent.com/Fijalkowskim/Fijalkowskim.github.io/main/PressAndMove/img/Olek.png')"
   );
 });
 
