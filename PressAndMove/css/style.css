@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(23, 128, 255, 1) 100%
+  );
+  overflow: hidden;
+}
+span {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  background-size: cover;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: moveUp 6s ease-in;
+  background-image: url("/img/Michal.png");
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    filter: hue-rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -4000%);
+    opacity: 0;
+    filter: hue-rotate(1000deg);
+  }
+}
+
+p {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  font-family: "Roboto", sans-serif;
+  color: white;
+  letter-spacing: 5px;
+  font-size: 5rem;
+  font-weight: 100;
+  opacity: 0.2;
+  pointer-events: none;
+  width: 100%;
+  text-align: center;
+}
+nav {
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 100px;
+}
+.character {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  left: 50%;
+  top: 50%;
+  margin: 0px 100px;
+  opacity: 0.4;
+  transition: all 0.5s;
+}
+.character:hover {
+  opacity: 0.8;
+}
+.chosen-character {
+  opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+  p {
+    font-size: 3rem;
+  }
+  .character {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    left: 50%;
+    top: 50%;
+    margin: 0px 10px;
+  }
+}
