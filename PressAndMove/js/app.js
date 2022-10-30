@@ -9,15 +9,24 @@ let imagePath = "";
 
 jakub.addEventListener("click", () => {
   if (currentCharacter === jakub) return;
-  ChangeCharacter(jakub, "url('/img/Jakub.png')");
+  ChangeCharacter(
+    jakub,
+    "url('https://github.com/Fijalkowskim/Fijalkowskim.github.io/blob/main/PressAndMove/img/Jakub.png?raw=true')"
+  );
 });
 michal.addEventListener("click", () => {
   if (currentCharacter === michal) return;
-  ChangeCharacter(michal, "url('/img/Michal.png')");
+  ChangeCharacter(
+    michal,
+    "url('https://github.com/Fijalkowskim/Fijalkowskim.github.io/blob/main/PressAndMove/img/Michal.png?raw=true')"
+  );
 });
 olek.addEventListener("click", () => {
   if (currentCharacter === olek) return;
-  ChangeCharacter(olek, "url('/img/Olek.png')");
+  ChangeCharacter(
+    olek,
+    "url('https://github.com/Fijalkowskim/Fijalkowskim.github.io/blob/main/PressAndMove/img/Olek.png?raw=true')"
+  );
 });
 
 body.addEventListener("mousedown", () => (mouseHold = true));
