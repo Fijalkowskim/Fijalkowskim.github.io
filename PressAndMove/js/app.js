@@ -72,4 +72,7 @@ function ChangeCharacter(newCharacter, newImagePath) {
   imagePath = newImagePath;
 }
 
-ChangeCharacter(jakub);
+ChangeCharacter(
+  jakub,
+  "url('https://raw.githubusercontent.com/Fijalkowskim/Fijalkowskim.github.io/main/PressAndMove/img/Jakub.png')"
+);
